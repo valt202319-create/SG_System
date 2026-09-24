@@ -1,0 +1,114 @@
+import sys
+
+
+class SG_SYSTEM:
+    def __init__(self):
+        self.username = ""
+        self.password = ""
+        self.phone = ""
+        self.email = ""
+        self.country = ""
+
+    def show_info(self):
+        print("Here is your user information...")
+        print("Username: " + self.username)
+        print("Phone number: " + self.phone)
+        print("Email address: " + self.email)
+        print("Country: " + self.country)
+        print("Password: " + self.password)
+
+
+def main():
+    print("HI AND WELCOME TO SG SYSTEM")
+
+    user = SG_SYSTEM()      # <-- the object is created here
+
+    # --- Username ---
+    user.username = input("Enter your username: ")
+    print("Welcome, " + user.username)
+    for _ in range(2):
+        print("Running.....")
+        print("Processing....")
+    answer = input("Are you sure that username's correct? (yes/no): ").lower()
+    if answer == 'yes':
+        print("Username confirmed.")
+    elif answer == 'no':
+        print("Please restart the program and enter the correct username.")
+        sys.exit()
+    else:
+        print("Invalid input. Please restart the program and enter 'yes' or 'no'.")
+        sys.exit()
+
+    # --- Password ---
+    user.password = input("Enter your password: ")
+    for _ in range(2):
+        print("Running.....")
+        print("Processing....")
+    answer = input("Are you sure that password's correct? (yes/no): ").lower()
+    if answer == 'yes':
+        print("Password confirmed.")
+    elif answer == 'no':
+        print("Please restart the program and enter the correct password.")
+        sys.exit()
+    else:
+        print("Invalid input. Please restart the program and enter 'yes' or 'no'.")
+        sys.exit()
+
+    # --- Phone ---
+    user.phone = input("Enter your phone number: ")
+    for _ in range(2):
+        print("Running.....")
+        print("Processing....")
+    answer = input("Are you sure that phone number's correct? (yes/no): ").lower()
+    if answer == 'yes':
+        print("Phone number confirmed.")
+    elif answer == 'no':
+        print("Please restart the program and enter the correct phone number.")
+        sys.exit()
+    else:
+        print("Invalid input. Please restart the program and enter 'yes' or 'no'.")
+        sys.exit()
+
+    # --- Email ---
+    user.email = input("Enter your email address: ")
+    for _ in range(2):
+        print("Running.....")
+        print("Processing....")
+    answer = input("Are you sure that email address's correct? (yes/no): ").lower()
+    if answer == 'yes':
+        print("Email address confirmed.")
+    elif answer == 'no':
+        print("Please restart the program and enter the correct email address.")
+        sys.exit()
+    else:
+        print("Invalid input. Please restart the program and enter 'yes' or 'no'.")
+        sys.exit()
+
+    # --- Country ---
+    user.country = input("Enter your country: ")
+    for _ in range(2):
+        print("Running.....")
+        print("Processing....")
+    answer = input("Are you sure that country's correct? (yes/no): ").lower()
+    if answer == 'yes':
+        print("Country confirmed.")
+    elif answer == 'no':
+        print("Please restart the program and enter the correct country.")
+        sys.exit()
+    else:
+        print("Invalid input. Please restart the program and enter 'yes' or 'no'.")
+        sys.exit()
+
+    # --- Show info? ---
+    answer = input("Do you want to check your user's information? (yes/no): ").lower()
+    if answer == 'yes':
+        user.show_info()
+    elif answer == 'no':
+        sys.exit()
+    else:
+        print("Invalid input. Please restart the program and enter 'yes' or 'no'.")
+        sys.exit()
+
+
+if __name__ == "__main__":
+    main()
